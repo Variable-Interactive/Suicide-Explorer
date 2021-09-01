@@ -1,0 +1,106 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Elements/Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Player/player.png" type="Texture" id=2]
+[ext_resource path="res://Elements/Player/Light2D.tscn" type="PackedScene" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 24.0581
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 27.3951
+
+[sub_resource type="Animation" id=3]
+resource_name = "left"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "right"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[node name="Player" type="KinematicBody2D" groups=[
+"player",
+]]
+position = Vector2( 125.716, 87.552 )
+script = ExtResource( 1 )
+speed = 500.0
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -4.7247, -3.46478 )
+scale = Vector2( 1.25, 1.25 )
+texture = ExtResource( 2 )
+hframes = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1.68179, -4.20448 )
+shape = SubResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Hitbox" type="Area2D" parent="." groups=[
+"player",
+]]
+position = Vector2( -1.68179, -4.20448 )
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource( 4 )
+
+[node name="Light2D" parent="." instance=ExtResource( 3 )]
+texture_scale = 22.13
+color = Color( 0.980392, 0.976471, 0.976471, 1 )
+energy = 0.35
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/left = SubResource( 3 )
+anims/right = SubResource( 2 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/05_SlowFallToHell.ogg-cd372cab526e9a70fbb35a6cf2bcab4e.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/background/05_SlowFallToHell.ogg"
+dest_files=[ "res://.import/05_SlowFallToHell.ogg-cd372cab526e9a70fbb35a6cf2bcab4e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

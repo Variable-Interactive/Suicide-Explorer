@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Audio/destroy.ogg" type="AudioStream" id=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends AudioStreamPlayer
+
+
+func _on_Destroyed_finished():
+	queue_free()
+	pass # Replace with function body.
+"
+
+[node name="Destroyed" type="AudioStreamPlayer"]
+stream = ExtResource( 2 )
+autoplay = true
+script = SubResource( 1 )
+[connection signal="finished" from="." to="." method="_on_Destroyed_finished"]

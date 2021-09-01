@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Audio/Laser_02.wav" type="AudioStream" id=1]
+[ext_resource path="res://Elements/Bullet/Bullet.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Spybot/bullet.png" type="Texture" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 7.30852
+height = 30.2074
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 5.25
+height = 26.5
+
+[node name="Bullet" type="RigidBody2D"]
+collision_layer = 16
+collision_mask = 16
+gravity_scale = 0.0
+script = ExtResource( 2 )
+bullet_force = 1500.0
+
+[node name="Sprite" type="Sprite" parent="."]
+rotation = 1.5708
+texture = ExtResource( 3 )
+
+[node name="Area2D" type="Area2D" parent="."]
+rotation = 1.5708
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 1 )
+autoplay = true
+max_distance = 1000.0
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
