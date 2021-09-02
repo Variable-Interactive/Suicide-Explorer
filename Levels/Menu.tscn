@@ -294,7 +294,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton" type="TextureButton" parent="ColorRect"]
+[node name="YoutubeButton" type="TextureButton" parent="ColorRect"]
 anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -78.3459
@@ -309,7 +309,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="ColorRect/TextureButton"]
+[node name="Label2" type="Label" parent="ColorRect/YoutubeButton"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -502,11 +502,4 @@ autoplay = true
 
 [node name="Tween" type="Tween" parent="."]
 
-[connection signal="mouse_entered" from="ColorRect/VBoxContainer/Play" to="." method="_on_Play_mouse_entered"]
-[connection signal="pressed" from="ColorRect/VBoxContainer/Play" to="." method="_on_Play_pressed"]
-[connection signal="mouse_entered" from="ColorRect/VBoxContainer/Instructions" to="." method="_on_Instructions_mouse_entered"]
-[connection signal="pressed" from="ColorRect/VBoxContainer/Instructions" to="." method="_on_Instructions_pressed"]
-[connection signal="mouse_entered" from="ColorRect/VBoxContainer/Quit" to="." method="_on_Quit_mouse_entered"]
-[connection signal="pressed" from="ColorRect/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
-[connection signal="pressed" from="ColorRect/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
