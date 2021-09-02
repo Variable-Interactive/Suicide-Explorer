@@ -366,7 +366,7 @@ __meta__ = {
 anims/reset = SubResource( 11 )
 anims/wasted = SubResource( 12 )
 
-[connection signal="area_entered" from="Goal" to="CanvasLayer/Interface" method="_on_Finished_area_entered"]
+[connection signal="area_entered" from="Goal" to="CanvasLayer/Interface" method="_on_Goal_area_entered"]
 [connection signal="pressed" from="CanvasLayer/Interface/Won/VBoxContainer/Next" to="CanvasLayer/Interface" method="_on_Next_pressed"]
 [connection signal="pressed" from="CanvasLayer/Interface/Won/VBoxContainer/Retry" to="CanvasLayer/Interface" method="_on_Retry_pressed"]
 [connection signal="pressed" from="CanvasLayer/Interface/MainMenu" to="CanvasLayer/Interface" method="_on_MainMenu_pressed"]
