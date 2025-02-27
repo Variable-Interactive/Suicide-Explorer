@@ -13,7 +13,7 @@ func _ready() -> void:
 	if Global.first_time:
 		Global.first_time = false
 		$ColorRect/VBoxContainer/Instructions/TextureRect.visible = true
-	
+
 	#Signal connections for menu buttons
 	var _err = $ColorRect/VBoxContainer/Play.connect("pressed",self,"_on_Play_pressed")
 	var _err_a = $ColorRect/VBoxContainer/Play.connect("mouse_entered",self,"_on_menu_buttons_mouse_entered")
@@ -76,7 +76,7 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		var _err = get_tree().change_scene("res://Levels/Level 1.tscn")
 
 
-#A signal for my youtube channel 
+#A signal for my youtube channel
 func _on_YoutubeButton_pressed():
 	# LIKE AND SUBSCRIBE :)
 	var _err = OS.shell_open("https://www.youtube.com/channel/UCkc4E2bJkQ91kejNKKd_U2g")

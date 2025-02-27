@@ -12,42 +12,42 @@
 [ext_resource path="res://Assets/Audio/background/menu.ogg" type="AudioStream" id=10]
 [ext_resource path="res://Assets/UI/Maze.png" type="Texture" id=11]
 
-[sub_resource type="AtlasTexture" id=13]
+[sub_resource type="AtlasTexture" id=1]
 flags = 2
 atlas = ExtResource( 11 )
 region = Rect2( -38.7375, -29.2652, 1062.66, 588.308 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 20
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 52
 font_data = ExtResource( 6 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 5 )
 region = Rect2( 2.65215, 3.31618, 54.6196, 55.595 )
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 9 )
 region = Rect2( 602.394, 970.374, 185.39, 185.39 )
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 9 )
 region = Rect2( 806.908, 970.374, 182.841, 185.39 )
 
-[sub_resource type="AtlasTexture" id=6]
+[sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 9 )
 region = Rect2( 192.69, 970.374, 184.549, 185.39 )
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 0.054902, 0.054902, 0.054902, 0.729412 )
 border_width_top = 21
 border_color = Color( 0.611765, 0.458824, 0, 1 )
 expand_margin_top = 20.0
 
-[sub_resource type="Theme" id=14]
+[sub_resource type="Theme" id=9]
 WindowDialog/colors/title_color = Color( 0, 0, 0, 1 )
 WindowDialog/constants/close_h_ofs = 18
 WindowDialog/constants/close_v_ofs = 18
@@ -56,21 +56,21 @@ WindowDialog/constants/title_height = 20
 WindowDialog/fonts/title_font = null
 WindowDialog/icons/close = null
 WindowDialog/icons/close_highlight = null
-WindowDialog/styles/panel = SubResource( 7 )
+WindowDialog/styles/panel = SubResource( 8 )
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=10]
 size = 22
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=10]
+[sub_resource type="DynamicFont" id=11]
 size = 10
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=11]
+[sub_resource type="DynamicFont" id=12]
 size = 15
 font_data = ExtResource( 1 )
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=13]
 tracks/0/type = "value"
 tracks/0/path = NodePath("FadeOut:color")
 tracks/0/interp = 1
@@ -130,7 +130,7 @@ margin_left = 8.0
 margin_top = 8.0
 margin_right = -9.0
 margin_bottom = -9.0
-texture = SubResource( 13 )
+texture = SubResource( 1 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -163,7 +163,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="ColorRect/VBoxContainer/Play"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.0509804, 0.305882, 0.909804, 1 )
 text = "Play"
 align = 1
@@ -189,7 +189,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="ColorRect/VBoxContainer/Instructions"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.231373, 0.898039, 0.117647, 1 )
 text = "Instructions"
 align = 1
@@ -228,7 +228,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="ColorRect/VBoxContainer/Quit"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.901961, 0.27451, 0.27451, 1 )
 text = "Quit"
 align = 1
@@ -247,9 +247,9 @@ margin_left = -359.0
 margin_top = -116.0
 margin_right = 157.0
 margin_bottom = -55.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.215686, 0.243137, 0.25098, 1 )
-text = "Suicide Explorer"
+text = "Mr. Bombastic"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -259,7 +259,7 @@ margin_left = 527.017
 margin_top = -10.6054
 margin_right = 737.017
 margin_bottom = 176.395
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -301,9 +301,9 @@ margin_left = -78.3459
 margin_top = 41.3227
 margin_right = -37.3459
 margin_bottom = 78.3227
-texture_normal = SubResource( 4 )
-texture_pressed = SubResource( 5 )
-texture_hover = SubResource( 6 )
+texture_normal = SubResource( 5 )
+texture_pressed = SubResource( 6 )
+texture_hover = SubResource( 7 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -318,7 +318,7 @@ margin_left = -144.433
 margin_top = -18.5
 margin_right = -24.4333
 margin_bottom = 18.5
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 0.866667, 0, 1 )
 text = "Youtube"
 align = 1
@@ -336,7 +336,7 @@ margin_left = -177.5
 margin_top = -201.0
 margin_right = 177.5
 margin_bottom = 201.0
-theme = SubResource( 14 )
+theme = SubResource( 9 )
 window_title = "Instructions"
 __meta__ = {
 "_edit_group_": true,
@@ -357,9 +357,9 @@ __meta__ = {
 [node name="Label2" type="Label" parent="ColorRect/AcceptDialog/VBoxContainer"]
 margin_right = 339.0
 margin_bottom = 36.0
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
 custom_colors/font_color = Color( 0.937255, 0.780392, 0.054902, 1 )
-text = "Suicide Explorer"
+text = "Mr. Bombastic"
 align = 1
 valign = 1
 
@@ -367,9 +367,9 @@ valign = 1
 margin_top = 40.0
 margin_right = 339.0
 margin_bottom = 56.0
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 11 )
 custom_colors/font_color = Color( 0.709804, 0.709804, 0.709804, 1 )
-text = "Made by : Variable"
+text = "Made by : Variable Interactive"
 align = 1
 autowrap = true
 
@@ -392,7 +392,7 @@ size_flags_vertical = 3
 [node name="Heading2" type="Label" parent="ColorRect/AcceptDialog/VBoxContainer/ScrollContainer/VBoxContainer"]
 margin_right = 327.0
 margin_bottom = 24.0
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
 custom_colors/font_color = Color( 0.0666667, 0.901961, 0.0784314, 1 )
 text = "Instructions:"
 
@@ -400,7 +400,7 @@ text = "Instructions:"
 margin_top = 28.0
 margin_right = 327.0
 margin_bottom = 158.0
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 11 )
 custom_colors/font_color = Color( 0.709804, 0.709804, 0.709804, 1 )
 text = "Hy there!.. lets play a simple game you will be inside a maze and you have to reach the end and in the mean time i will try to kill you!!! so kindly stay away from the walls when you die.
 (I dont want them to get dirty)
@@ -412,7 +412,7 @@ autowrap = true
 margin_top = 162.0
 margin_right = 327.0
 margin_bottom = 186.0
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
 custom_colors/font_color = Color( 0.0666667, 0.901961, 0.0784314, 1 )
 text = "Controls:"
 
@@ -420,13 +420,13 @@ text = "Controls:"
 margin_top = 190.0
 margin_right = 327.0
 margin_bottom = 320.0
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 11 )
 custom_colors/font_color = Color( 0.709804, 0.709804, 0.709804, 1 )
 text = "W, S, A, D to move
 
 \"ESC\" to skip intro
 
-press \"Space Bar\" to commit suicide
+press \"Space Bar\" to (reset)
 (Though i would prefer you not using it cause it would spoil my fun)"
 align = 1
 autowrap = true
@@ -435,7 +435,7 @@ autowrap = true
 margin_top = 324.0
 margin_right = 327.0
 margin_bottom = 348.0
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
 custom_colors/font_color = Color( 0.0666667, 0.901961, 0.0784314, 1 )
 text = "Game Rules:"
 
@@ -443,7 +443,7 @@ text = "Game Rules:"
 margin_top = 352.0
 margin_right = 327.0
 margin_bottom = 501.0
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 11 )
 custom_colors/font_color = Color( 0.709804, 0.709804, 0.709804, 1 )
 text = "your position will be saved every \"5\" seconds
 when you die, you will return to your previous save and that save will be deleted
@@ -457,7 +457,7 @@ autowrap = true
 margin_top = 505.0
 margin_right = 327.0
 margin_bottom = 529.0
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
 custom_colors/font_color = Color( 0.0666667, 0.901961, 0.0784314, 1 )
 text = "Asset Info:"
 
@@ -465,7 +465,7 @@ text = "Asset Info:"
 margin_top = 533.0
 margin_right = 327.0
 margin_bottom = 910.0
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 11 )
 custom_colors/font_color = Color( 0.709804, 0.709804, 0.709804, 1 )
 text = "
 audio assets : 
@@ -490,7 +490,7 @@ align = 1
 autowrap = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/play = SubResource( 12 )
+anims/play = SubResource( 13 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 volume_db = -20.0
